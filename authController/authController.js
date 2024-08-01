@@ -3,7 +3,7 @@ const axios = require("axios");
 // import crypto from "crypto";
 
 const Test = (req, res) => {
-  const message = "Test route is working!";
+  const message = "Production server!";
   res.status(200).json({ message });
 };
 

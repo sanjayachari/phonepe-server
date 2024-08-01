@@ -1,8 +1,8 @@
 const axios = require("axios");
-import { Buffer } from "buffer";
-import crypto from "crypto";
+// import { Buffer } from "buffer";
+// import crypto from "crypto";
 
-export const Test = (req: any, res: any) => {
+const Test = (req, res) => {
   const message = "Test route is working!";
   var x = 1;
   debugger;
@@ -13,7 +13,7 @@ export const Test = (req: any, res: any) => {
 };
 
 // https://youtu.be/4oDmBjusoKM?si=iZB5QaUH_0lqVeux
-export const transaction = async (req: any, res: any) => {
+const transaction = async (req, res) => {
   const payload = {
     merchantId: "PGTESTPAYUAT",
     merchantTransactionId: "MT7850590068188104",
@@ -64,9 +64,10 @@ export const transaction = async (req: any, res: any) => {
       }
     );
     console.log("resp", resp);
-  } catch (error: any) {
+  } catch (error) {
     console.log(error);
   }
 };
 
 
+module.exports = { Test, transaction };

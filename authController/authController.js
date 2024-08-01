@@ -4,11 +4,6 @@ const axios = require("axios");
 
 const Test = (req, res) => {
   const message = "Test route is working!";
-  var x = 1;
-  debugger;
-  var x = x+1;
-  debugger;
-  console.log(x)
   res.status(200).json({ message });
 };
 

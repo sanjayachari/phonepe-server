@@ -319,6 +319,71 @@ const shippingPolicy = (req, res) => {
   res.send(shippingPolicyContent);
 };
 
+const pPolicy = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - WonderWithSan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #666;
+        }
+        p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Privacy Policy for WonderWithSan</h1>
+
+    <h2>Introduction</h2>
+    <p>This Privacy Policy describes how WonderWithSan collects, uses, discloses, and manages personal data collected from you. By using our website or services, you agree to the collection, transfer, storage, disclosure, and use of your data as described in this policy.</p>
+
+    <h2>Personal Data We Collect</h2>
+    <p>We collect personal data that you voluntarily provide to us, such as your name, email address, and any other information you choose to share with us through forms, emails, or other interactions.</p>
+
+    <h2>How We Use Your Personal Data</h2>
+    <p>We use your personal data to provide and improve our services, respond to your inquiries, send you communications, and personalize your experience with us. We may also use your data to comply with legal obligations and to protect and defend our rights and property.</p>
+
+    <h2>Sharing Your Personal Data</h2>
+    <p>We do not sell your personal data to third parties for their marketing purposes without your consent. However, we may share your data with trusted partners who assist us in operating our website, conducting our business, or serving our users, so long as those parties agree to keep this information confidential.</p>
+
+    <h2>Your Rights and Choices</h2>
+    <p>You have the right to access, correct, or delete your personal data held by us. You also have the right to object to our use of your data or to ask us to restrict our use of your data. These rights can usually be exercised by contacting us at the email address below.</p>
+
+    <h2>Security Measures</h2>
+    <p>We take reasonable measures to help protect your personal data from loss, theft, misuse, unauthorized access, disclosure, alteration, and destruction.</p>
+
+    <h2>Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to consult this Privacy Policy regularly for any changes.</p>
+
+    <footer>
+        <p>Last Updated: 1/08/2024 </p>
+        <p>Contact Information:</p>
+        <p>WonderWithSan<br>
+        Email: codesanjay93@gmail.com<br>
+        Website: https://sanjay-portfolio-ten.vercel.app/</p>
+    </footer>
+</body>
+</html>
+`
+
+const privacyPolicy = (req, res) => {
+  res.send(pPolicy);
+};
+
 const transaction = async (req, res) => {
   const payload = {
     merchantId: "PGTESTPAYUAT",
@@ -376,4 +441,4 @@ const transaction = async (req, res) => {
 };
 
 
-module.exports = { Test, transaction,Terms ,Policies,ReturnPolicy , shippingPolicy};
+module.exports = { Test, transaction,Terms ,Policies,ReturnPolicy , privacyPolicy,shippingPolicy};
